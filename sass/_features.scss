@@ -5,8 +5,10 @@
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: auto auto; // but this is not necessary
+    // grid-template-columns: repeat(3, 1fr); // this removed for responsivity reason
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    // grid-template-rows: auto auto; // when we declaire grid-template-columns, we can also decalair its rows, but this is not necessary
     grid-gap: 6rem;
     align-items: start; // to align text to the beginning of the grid above, so that when the text is too little, it moves up instead of scatch in the middle
 }
