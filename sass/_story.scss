@@ -2,6 +2,21 @@
     &__pictures {
         background-color: $color-primary;
         grid-column: full-start / col-end 4;
+
+        display: grid;
+        grid-template-rows: repeat(6, 1fr); // to devide grid of the left side into 6 rows (4 for image in the middle, 1 empty space left and right side of the image)
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+    }
+
+    &__img--1 {
+        width: 100%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+    }
+
+    &__img--2 {
+        width: 100%;
     }
 
     &__content {
