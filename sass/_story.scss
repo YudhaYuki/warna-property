@@ -10,11 +10,18 @@
 
         padding: 6rem 12rem;
         
+        /*
         // Combining CSS flex inside/with GRID
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        */
+
+        // OR we can use JUST NORMAL GRID as the following
+        display: grid;
+        align-content: center;
+        justify-items: start;
     }
 
     &__text {
