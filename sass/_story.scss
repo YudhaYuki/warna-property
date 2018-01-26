@@ -9,6 +9,12 @@
         grid-column: col-start 5 / full-end;
 
         padding: 6rem 12rem;
+        
+        // Combining CSS flex inside/with GRID
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     &__text {
