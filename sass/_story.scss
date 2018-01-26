@@ -13,10 +13,15 @@
         width: 100%;
         grid-row: 2 / 6;
         grid-column: 2 / 6;
+        box-shadow: 0 2rem 5rem rgba(#000, .1);
     }
 
     &__img--2 {
-        width: 100%;
+        width: 115%; // make the 2nd image overlap to the right
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
+        z-index: 20; // To show the hidden overlapping image
+        box-shadow: 0 2rem 5rem rgba(#000, .2);        
     }
 
     &__content {
