@@ -14,8 +14,15 @@
     grid-row-gap: 1.5rem;
     justify-content: center;
 
+
+    // Let the header take 100% width of the page when <800px
     @media only screen and (max-width: $bp-medium) {
         grid-column: 1 / -1;
+    }
+
+    // padding on header when <600px
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
     }
 
     &__logo {
