@@ -17,9 +17,12 @@
 
     &__img {
         width: 100%;
+        grid-row: 1 / 2;
+        z-index: 1;
 
         // We want image, name and button fully displayed in two columns
         grid-column: 1 / -1;
+
     }
 
     &__like {
@@ -28,6 +31,10 @@
         fill: $color-primary;
         height: 2.5rem;
         width: 2.5rem;
+        z-index: 2;
+        justify-self: end;
+        margin: 1rem;
+        
     }
 
     &__name {
