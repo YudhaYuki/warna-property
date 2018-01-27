@@ -26,7 +26,19 @@
     }
 
     &__seenon-text {
+        display: grid;
 
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+
+        // To treat text as grid items (This two pseudo elemets together with the text, will be 3 grid element)
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
     }
 
     &__seenon-logos {
