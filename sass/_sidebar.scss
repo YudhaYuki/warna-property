@@ -6,6 +6,12 @@
     // We again use flex to center the navigatio sidebar
     display: flex;
     justify-content: center;
+
+    // removing sidebar when <1000px to top
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
 }
 
 .nav-btn {
