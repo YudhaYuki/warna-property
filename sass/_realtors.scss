@@ -10,6 +10,11 @@
     justify-items: center;
     grid-row-gap: 2rem;
 
+    // Let the realtors take 100% width of the page when <800px
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
