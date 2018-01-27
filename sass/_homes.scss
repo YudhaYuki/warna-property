@@ -11,8 +11,15 @@
 .home {
     background-color: $color-grey-light-1;
 
+    // We devide the card into two column
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
     &__img {
         width: 100%;
+
+        // We want image, name and button fully displayed in two columns
+        grid-column: 1 / -1;
     }
 
     &__like {
@@ -20,7 +27,8 @@
     }
 
     &__name {
-
+        // We want image, name and button fully displayed in two columns
+        grid-column: 1 / -1;
     }
 
     &__location,
@@ -37,5 +45,10 @@
         p {
 
         }
+    }
+
+    &__btn {
+        // We want image, name and button fully displayed in two columns
+        grid-column: 1 / -1;
     }
 }
