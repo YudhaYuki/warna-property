@@ -14,6 +14,7 @@
     // We devide the card into two column
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem; // Adding space in this case for the name because it's overlapped between image and details and covers those
 
     &__img {
         width: 100%;
@@ -38,8 +39,17 @@
     }
 
     &__name {
+
+        grid-row: 1 / 2;
         // We want image, name and button fully displayed in two columns
         grid-column: 1 / -1;
+
+        justify-self: center; // horizontally
+        align-self: end;  // vertically
+        z-index: 3;
+
+        width: 80%;
+
         font-family: $font-display;
         font-size: 1.6rem;
         text-align: center;
@@ -47,6 +57,14 @@
         background-color: $color-secondary;
         color: #fff;
         font-weight: 400;
+
+        transform: translateY(50%); // moving the name down 50%
+    }
+
+    // We add this to trick the gap between image and the first two details above
+    &__location,
+    &__rooms {
+        margin-top: 2.5rem;
     }
 
     &__location,
@@ -54,15 +72,19 @@
     &__area,
     &__price {
 
+        font-size: 1.5rem;
+        margin-left: 2rem;
+
         svg {
             fill: $color-primary;
             height: 2rem;
             width: 2rem;
         }
 
-        p {
+        // We remove this because the text will be inherited
+        // p {
 
-        }
+        // }
     }
 
     &__btn {
